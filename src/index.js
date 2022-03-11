@@ -1,12 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import ReactDOM from 'react-dom'; //integração do react com o navegador
+import App from './App'; //importando App.js
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <App />,
   document.getElementById('root')
-);
+); //mostrando na tela o armazenado em App
 
 
