@@ -3,10 +3,12 @@ import React, { useState } from 'react';
 import Header from './Header';
 
 function App() {
-  let counter = 0;
+  const [counter, setCounter] = useState(0); //setCounter é uma função que altera o valor de counter
+
+  //retorna um array[valor, funçãoDeAtualização]
 
   function increment(){
-    counter += 1;
+    setCounter(counter + 1);
 
     console.log(counter);
   }
