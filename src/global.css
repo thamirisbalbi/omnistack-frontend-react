@@ -12,3 +12,8 @@ body {
     background: #f0f0f5;
     -webkit-font-smoothing: antialiased;
 }
+
+imput, button, textarea { 
+/* Por padrão, não pegam a fonte de body*/
+font: 400 18px Roboto, sans-serif; 
+}
