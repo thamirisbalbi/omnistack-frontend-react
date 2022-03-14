@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Header from './Header';
+import Login from './pages/Login'; //quando selecionamos uma pasta, automaticamente o sistema procura o arquivo index de dentro
 
 function App() {
   const [counter, setCounter] = useState(0); //setCounter é uma função que altera o valor de counter
