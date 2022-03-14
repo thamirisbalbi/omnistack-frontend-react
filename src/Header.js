@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Header(props) { //export default exporta o componente 
+export default function Header( {children} ) { //export default exporta o componente 
     return (
         <header>
-            <h1>{props.children}</h1>
+            <h1>{children}</h1>
         </header>
 
     );
