@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function Login() {
-    return {
-        
-    };
+    return (
+        <h1>Hello World</h1>
+    );
 }
