@@ -13,7 +13,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-imput, button, textarea { 
+input, button, textarea { 
 /* Por padrão, não pegam a fonte de body*/
 font: 400 18px Roboto, sans-serif; 
 }
@@ -22,7 +22,7 @@ button {
     cursor: pointer; /* ícone do cursor indicando para clicar */
 }
 
-form imput {
+form input {
     width: 100%;
     height: 60px;
     color: #333;
