@@ -4,10 +4,7 @@ import Login from './pages/Login'; //quando selecionamos uma pasta, automaticame
 
 function App() {
   return (
-    <div>
-      <Header>Contador: {counter}</Header>
-      <button onClick={increment }>Incrementar</button>
-    </div>
+      <Login />
   );
 }
 
