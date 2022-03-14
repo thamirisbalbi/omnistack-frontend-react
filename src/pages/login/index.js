@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {FiLogIn} from 'react-icons/fi' //chaves para desestruturar o que se deseja pegar 
+//FiLogIn é usado como um componente
 import './styles.css';
 
 import logoImg from '../../assets/logo.png'
@@ -11,6 +13,19 @@ export default function Login() {
         <div className= "login-container">
             <section className="form">
                 <img src={logoImg} alt="Be The Hero" />
+            
+            <form>
+                <h1>Faça seu login</h1>
+
+                <imput placeholder="Sua ID" />
+                <button type="submit">Entrar</button>
+
+                <a href="/register">
+                    <FiLogIn size={16} color="#E02041" />
+                    Não tenho cadastro
+                </a>
+            </form> 
+            
             </section>
 
             <img src={heroesImg} alt="Heroes" /> 
