@@ -45,3 +45,7 @@ form input {
     font-size: 18px;
     line-height: 60px; 
 }
+
+.button:hover {
+    filter: brightness(90%); /* escurece botão quando passado o mouse em cima*/
+}
