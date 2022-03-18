@@ -50,3 +50,22 @@ form input {
 .button:hover { /*ação que acontece quando passa o mouse por cima*/
     filter: brightness(90%); /* escurece botão quando passado o mouse em cima*/   
 }
+
+.back-link {
+    display: flex;
+    align-items: center; /*deixa a parte "não tenho cadastro" alinhado para o centro*/
+    margin-top: 40px;
+    color: #41414d;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s; /*duração da transição */
+}
+
+.back-link svg {
+    margin-right: 8px;
+}
+
+.back-link:hover {
+    opacity: 0.8; /* transição*/
+}
