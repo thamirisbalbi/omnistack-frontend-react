@@ -2,11 +2,11 @@ import React from 'react';
 
 import './global.css';
 
-import Login from './pages/Login'; //quando selecionamos uma pasta, automaticamente o sistema procura o arquivo index de dentro
+import Routes from './routes'
 
 function App() {
   return (
-      <Login />
+      <Routes />
   );
 }
 
