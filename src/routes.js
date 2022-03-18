@@ -9,7 +9,6 @@ export default function Routes() { //as rotas viram componentes
             <Switch>
                 <Route path='/' component={Login} />
             </Switch>
-
         </BrowserRouter>
     );
 }
