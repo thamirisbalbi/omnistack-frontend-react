@@ -25,21 +25,3 @@
     margin-bottom: 32px;
 }
 
-.login-container section.form form a {
-    display: flex;
-    align-items: center; /*deixa a parte "não tenho cadastro" alinhado para o centro*/
-    margin-top: 40px;
-    color: #41414d;
-    font-size: 18px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: opacity 0.2s; /*duração da transição */
-}
-
-.login-container section.form form a svg {
-    margin-right: 8px;
-}
-
-.login-container section.form form a:hover {
-    opacity: 0.8; /* transição*/
-}
