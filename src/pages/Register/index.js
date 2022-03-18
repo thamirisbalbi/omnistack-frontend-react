@@ -4,6 +4,16 @@ import './styles.css';
 
 export default function Register() {
     return (
-    <h1>Register</h1>
+        <div className="register-container">
+            <div className="content">
+                <section>
+                    
+                </section>
+
+                <form>
+                    
+                </form>
+            </div>
+        </div>
     );
 }
