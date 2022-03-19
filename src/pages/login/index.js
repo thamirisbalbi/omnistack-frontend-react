@@ -13,7 +13,7 @@ export default function Login() {
     return (
         <div className= "login-container">
             <section className="form">
-                <img src={logoImg} alt="Be The Hero" />
+                <img src={logoImg} alt="Be The Hero" width="300" height="200"/>
             
             <form>
                 <h1>Faça seu login</h1>
@@ -28,7 +28,7 @@ export default function Login() {
             
             </section>
 
-            <img src={heroesImg} alt="Heroes" /> 
+            <img src={heroesImg} alt="Heroes" width="400" height="400"/> 
         </div>
 
     );
