@@ -11,7 +11,7 @@ export default function Register() {
         <div className="register-container">
             <div className="content">
                 <section>
-                    <img src={heroesImg} alt="Be The Hero" width="120" height="120"/> 
+                    <img src={heroesImg} alt="Be The Hero" width="130" height="130"/> 
 
                     <h1>Cadastro</h1>
                     <p>Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG.</p>
