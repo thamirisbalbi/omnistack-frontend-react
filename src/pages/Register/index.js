@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi'; //importa ícone do feather icons
 
+import api from '../../services/api';
 import './styles.css';
 
 import heroesImg from '../../assets/heroes.png';
