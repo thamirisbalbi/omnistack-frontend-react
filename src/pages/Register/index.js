@@ -8,6 +8,10 @@ import './styles.css';
 import heroesImg from '../../assets/heroes.png';
 
 export default function Register() {
+    function handleRegister() {
+        
+    }
+
     return (
         <div className="register-container">
             <div className="content">
