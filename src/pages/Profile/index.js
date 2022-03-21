@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiPower } from 'react-icons/fi';
 
+import './styles.css';
+
 import logoImg from '../../assets/logo.png';
 
 export default function Profile() {
