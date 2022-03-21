@@ -6,7 +6,7 @@
 
     display: flex; /* por padrão os itens ficarão um ao lado do outro com esse comando*/
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .login-container section.form {
