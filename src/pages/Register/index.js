@@ -9,7 +9,7 @@ import heroesImg from '../../assets/heroes.png';
 
 export default function Register() {
     function handleRegister() {
-        
+
     }
 
     return (
@@ -27,7 +27,7 @@ export default function Register() {
                     </Link> 
                 </section>
 
-                <form>
+                <form onSubmit={handleRegister}>
                     <input placeholder="Nome da ONG" />
                     <input type="email" placeholder="E-mail" />
                     <input placeholder= "WhatsApp" /> 
