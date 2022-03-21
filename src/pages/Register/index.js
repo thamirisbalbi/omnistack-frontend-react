@@ -8,8 +8,8 @@ import './styles.css';
 import heroesImg from '../../assets/heroes.png';
 
 export default function Register() {
-    function handleRegister() {
-
+    function handleRegister(e) { //'e' seria o evento do formulário
+        e.preventDefault(); //previne o comportamento padrão do formulário 
     }
 
     return (
