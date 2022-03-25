@@ -46,7 +46,7 @@ export default function Register() {
                     <input 
                         placeholder="Nome da ONG"
                         value={name}
-                        onChange={e => setName(e.target.value)} //arrow function 
+                        onChange={e =>  setName(e.target.value)} //arrow function 
                     />
                     <input 
                         type="email" 

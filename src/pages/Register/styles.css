@@ -3,7 +3,6 @@
     max-width: 1120px; 
     height: 100vh;
     margin: 0 auto;
-
     display: flex; /* por padrão os itens ficarão um ao lado do outro com esse comando*/
     align-items: center;
     justify-content: center;
@@ -54,4 +53,3 @@
 /* engloba o input que tem um input antes dele: adiciona estilização em todos os inputs a partir do segundo*/
     margin-left: 8px;
 }
-
