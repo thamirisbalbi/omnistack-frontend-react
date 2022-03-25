@@ -14,7 +14,7 @@ export default function Register() {
     const [city, setCity] = useState('');
     const [uf, setUf] = useState('');
 
-    function handleRegister(e) { //'e' seria o evento do formulário
+    async function handleRegister(e) { //'e' seria o evento do formulário
         e.preventDefault(); //previne o comportamento padrão do formulário 
         
         const data = {
@@ -25,7 +25,7 @@ export default function Register() {
             uf,
         }; //tira o console log e deixa apenas o objeto javascript
     
-        api.post('ongs', data) //envia api e faz cadastro
+        const response = await api.post('ongs', data); //envia ao usuário mensagem de acordo com a resposta que o api manda para a aplicação, utilizando o método await e async para esperar a função acabar de executar para o envio. 
     }
 
     return (
