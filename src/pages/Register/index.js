@@ -25,6 +25,7 @@ export default function Register() {
             uf,
         }; //tira o console log e deixa apenas o objeto javascript
     
+        api.post('ongs', data) //envia api e faz cadastro
     }
 
     return (
