@@ -24,8 +24,16 @@ export default function Register() {
             city,
             uf,
         }; //tira o console log e deixa apenas o objeto javascript
-    
-        const response = await api.post('ongs', data); //envia ao usuário mensagem de acordo com a resposta que o api manda para a aplicação, utilizando o método await e async para esperar a função acabar de executar para o envio. 
+        try {
+            const response = await api.post('ongs', data); //envia ao usuário mensagem de acordo com a resposta que o api manda para a aplicação, utilizando o método await e async para esperar a função acabar de executar para o envio. 
+            //dentro de response terá o id que o api retorna. 
+
+            alert(`Seu ID de acesso: ${response.data.id}`); //envia mensagem ao usuário acessando seu ID, caso tenha dado certo 
+        }
+           catch(err) {
+            alert(`Erro no cadastro. Tente novamente.`); //em caso de erro no cadastro
+            }
+        
     }
 
     return (
