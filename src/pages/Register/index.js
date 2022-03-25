@@ -17,13 +17,13 @@ export default function Register() {
     function handleRegister(e) { //'e' seria o evento do formulário
         e.preventDefault(); //previne o comportamento padrão do formulário 
         
-        console.log({
+        const data = {
             name,
             email,
             whatsapp,
             city,
             uf,
-        })
+        }; //tira o console log e deixa apenas o objeto javascript
     
     }
 
