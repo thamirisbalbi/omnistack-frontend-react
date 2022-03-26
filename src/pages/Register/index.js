@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi'; //importa ícone do feather icons
 
 import api from '../../services/api';
@@ -13,6 +13,8 @@ export default function Register() {
     const [whatsapp, setWhatsapp] = useState('');
     const [city, setCity] = useState('');
     const [uf, setUf] = useState('');
+
+    const history = useHistory(); //history serve para navegação através de função JavaScript, quando não é possível colocar o Link do react router dom
 
     async function handleRegister(e) { //'e' seria o evento do formulário
         e.preventDefault(); //previne o comportamento padrão do formulário 
@@ -29,6 +31,7 @@ export default function Register() {
             //dentro de response terá o id que o api retorna. 
 
             alert(`Seu ID de acesso: ${response.data.id}`); //envia mensagem ao usuário acessando seu ID, caso tenha dado certo 
+            history.push('/'); //envia o usuário de volta para a rota principal
         }
            catch(err) {
             alert(`Erro no cadastro. Tente novamente.`); //em caso de erro no cadastro
