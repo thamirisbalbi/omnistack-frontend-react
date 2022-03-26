@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Link} from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import {FiLogIn} from 'react-icons/fi' //chaves para desestruturar o que se deseja pegar 
 //FiLogIn é usado como um componente
@@ -23,7 +23,7 @@ export default function Login() {
         
             localStorage.setItem('ongId', id);
             localStorage.setItem('ongName', response.data.name);
-            
+
         } catch (err) {
             alert('Falha no login. Tente novamente.');
         }
