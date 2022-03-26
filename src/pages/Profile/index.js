@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React, {useEffect} from 'react'; 
 import { Link } from 'react-router-dom';
 import { FiPower, FiTrash2 } from 'react-icons/fi';
 
