@@ -13,6 +13,8 @@ import heroesImg from '../../assets/heroes.png';
 
 
 export default function Login() {
+    const [id, setId] = useState('');
+
     return (
         <div className= "login-container">
             <section className="form">
