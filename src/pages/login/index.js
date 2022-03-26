@@ -14,6 +14,7 @@ import heroesImg from '../../assets/heroes.png';
 
 export default function Login() {
     const [id, setId] = useState('');
+    const history = useHistory();
 
    async function handleLogin(e) {
         e.preventDefault(); //previne reload de página ao envio de formulário
@@ -24,6 +25,7 @@ export default function Login() {
             localStorage.setItem('ongId', id);
             localStorage.setItem('ongName', response.data.name);
 
+            history.push('/profile');
         } catch (err) {
             alert('Falha no login. Tente novamente.');
         }
