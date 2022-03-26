@@ -15,12 +15,24 @@ import heroesImg from '../../assets/heroes.png';
 export default function Login() {
     const [id, setId] = useState('');
 
+   async function handleLogin(e) {
+        e.preventDefault(); //previne reload de página ao envio de formulário
+
+        try {
+            const response = await api.post('sessions', { id } ); // envia a rota de login, e o objeto contendo o id do usuário 
+        
+            console.log(response.data.name); //a aplicação dando certo, retorna o nome da ong
+        } catch (err) {
+            alert('Falha no login. Tente novamente.');
+        }
+    }
+
     return (
         <div className= "login-container">
             <section className="form">
                 <img src={logoImg} alt="Be The Hero" width="300" height="200"/>
             
-            <form>
+            <form onSubmit={handleLogin}>
                 <h1>Faça seu login</h1>
 
                 <input
