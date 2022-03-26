@@ -21,7 +21,9 @@ export default function Login() {
         try {
             const response = await api.post('sessions', { id } ); // envia a rota de login, e o objeto contendo o id do usuário 
         
-            console.log(response.data.name); //a aplicação dando certo, retorna o nome da ong
+            localStorage.setItem('ongId', id);
+            localStorage.setItem('ongName', response.data.name);
+            
         } catch (err) {
             alert('Falha no login. Tente novamente.');
         }
