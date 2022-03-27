@@ -24,6 +24,18 @@ export default function Profile() {
         }) //pega a resposta e grava os seus dados no estado
     }, [ongId]); //para o React, é útil colocar ongId como dependência, por ser uma variável que se usa no useEffect, caso o Id da ong mude, é possível recalcular o perfil mostrando os incidentes passados, por exemplo.
 
+    async function handleDeleteIncident(id) {
+        try {
+            await api.delete(`incidents/${id}`, {
+                headers: {
+                    Authorization: ongId,
+                }
+            });
+        } catch (err) {
+            alert('Erro ao deletar caso. Tente novamente.')
+        }
+    }
+
     return (
         <div className="profile-container">
             <header>
@@ -50,7 +62,7 @@ export default function Profile() {
                         <strong>VALOR:</strong>
                         <p>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(incident.value)}</p> 
 
-                        <button type="button">
+                        <button onClick={() => handleDeleteIncident(incident.id)} type="button">
                             <FiTrash2 size={20} color="#a8a8b3" />
                         </button>
                     </li>
