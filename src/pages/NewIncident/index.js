@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from  'react-router-dom';
+import { Link, useHistory } from  'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 
 import api from '../../services/api'; 
@@ -12,6 +12,8 @@ export default function NewIncident() {
     const [title,setTitle] = useState('');
     const [description,setDescription] = useState('');
     const [value,setValue] = useState('');
+
+    const history = useHistory();
 
     const ongId = localStorage.getItem('ongId'); //traz para storage local o id da ong para poder ser usado em header authorization na aplicação dentro de try 
 
@@ -29,6 +31,8 @@ export default function NewIncident() {
                     Authorization: ongId,
                 }
             })
+
+            history.push('/profile');
         } catch (err) {
             alert('Erro ao cadastrar caso. Tente novamente.');
         }
