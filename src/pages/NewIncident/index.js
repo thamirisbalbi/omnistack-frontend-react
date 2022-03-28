@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from  'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 
@@ -7,6 +7,12 @@ import './styles.css';
 import heroesImg from '../../assets/heroes.png';
 
 export default function NewIncident() {
+    const [title,setTitle] = useState('');
+    const [description,setDescription] = useState('');
+    const [value,setValue] = useState('');
+
+
+
     return (
         <div className="new-incident-container">
             <div className="content">
