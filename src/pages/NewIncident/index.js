@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from  'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 
+import api from '../../services/api'; 
+
 import './styles.css';
 
 import heroesImg from '../../assets/heroes.png';
@@ -11,7 +13,27 @@ export default function NewIncident() {
     const [description,setDescription] = useState('');
     const [value,setValue] = useState('');
 
+    const ongId = localStorage.getItem('ongId'); //traz para storage local o id da ong para poder ser usado em header authorization na aplicação dentro de try 
 
+    async function handleNewIncident(e) {
+        e.preventDefault(); //previne comportamento padrão do formulário
+
+        const data = {
+            title,
+            description,
+            value,
+        };
+        try {
+            await api.post('incidents', data, { //passando a rota, data, e a header authorization 
+                headers: {
+                    Authorization: ongId,
+                }
+            })
+        } catch (err) {
+            alert('Erro ao cadastrar caso. Tente novamente.');
+        }
+
+    }
 
     return (
         <div className="new-incident-container">
@@ -28,7 +50,7 @@ export default function NewIncident() {
                     </Link> 
                 </section>
 
-                <form>
+                <form onSubmit={handleNewIncident}>
                     <input 
                         placeholder="Título do caso"
                         value={title}
