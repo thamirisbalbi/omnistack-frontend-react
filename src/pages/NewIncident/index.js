@@ -29,9 +29,23 @@ export default function NewIncident() {
                 </section>
 
                 <form>
-                    <input placeholder="Título do caso" />
-                    <textarea placeholder="Descrição" /> 
-                    <input placeholder="Valor em reais" />
+                    <input 
+                        placeholder="Título do caso"
+                        value={title}
+                        onChange={e => setTitle(e.target.value)}
+                    />
+
+                    <textarea 
+                        placeholder="Descrição"
+                        value={description}
+                        onChange={e => setDescription(e.target.value)}
+                    />
+                    
+                    <input 
+                        placeholder="Valor em reais"
+                        value={value}
+                        onChange={e => setValue(e.target.value)}
+                    />
 
                     <button className="button" type="submit" >Cadastrar</button>
                 </form>
