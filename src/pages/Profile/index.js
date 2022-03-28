@@ -31,6 +31,7 @@ export default function Profile() {
                     Authorization: ongId,
                 }
             });
+            setIncidents(incidents.filter(incidents => incidents.id !== id)); //para cada um dos incidentes, manter apenas os com id diferentes do id deletado
         } catch (err) {
             alert('Erro ao deletar caso. Tente novamente.')
         }
